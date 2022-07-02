@@ -1,0 +1,313 @@
+/*=============== GOOGLE FONTS ===============*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*=============== NAVAGATION BAR ===============*/
+
+.nav-bar{
+    font-family: Roboto, Ubuntu, sans-serif;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b8b8b8;
+    padding: 1rem 1rem;
+    font-size: .75rem;
+}
+.nav-bar h2{
+    font-weight: 400;
+    padding-left: 2rem;
+}
+.nav-bar a{
+    text-decoration: none;
+    color: black;
+}
+.tilt-shake:hover {
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(1.2px, 1.2px) rotate(1.2deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-1.2px, 1.2px) rotate(-1.2deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+.nav-bag {
+    display: flex;
+}
+.bag-quantity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    background-color: #E54B4B;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    color:black;
+    margin: .2rem .2rem;
+}
+
+/*=============== 404 NOT FOUND ===============*/
+
+.not-found{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(68, 68, 68);
+    min-height: 80vh;
+}
+.not-found h2{
+    font-size: 55px;
+}
+.not-found p{
+    font-size: 20px;
+}
+
+/*=============== HOME ===============*/
+
+.home-container{
+    padding: 2rem 4rem;
+    width: 1000px;
+    max-width: 100%;
+    margin: auto;
+    
+}
+.home-container h2{
+    font-size: 40px;
+    font-weight: 300;
+    font-family: Roboto, Ubuntu, sans-serif;
+    text-align: center;
+}
+
+/*=============== PRODUCTS ===============*/
+
+.products{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 15px;
+}
+.product{
+    font-family: Roboto, Ubuntu, sans-serif;
+    width: 200px;
+    max-width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+}
+.product h3{
+    font-size: 25px;
+    font-weight: 400;
+}
+.product .details .price{
+    font-size: 20px;
+    font-weight: 700;
+}
+.product button{
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    margin-top: 2rem;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #4b70e2;
+    color: white;
+    letter-spacing: 0.3px;
+}
+.product button:hover{
+    background-color: #bebebe;
+    color: black;
+    transition: .4s;
+}
+
+/*=============== BASKET ===============*/
+
+.cart-container{
+    font-family: Roboto, Ubuntu, sans-serif;
+    padding: 2rem 4rem;
+}
+.cart-container h2{
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+}
+.cart-container .titles{
+    margin: 2rem 0 1rem 0;
+}
+.cart-container,
+.titles h3{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.cart-item, 
+.cart-container .titles{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    column-gap: 0.5rem;
+}
+.cart-item{
+    border-top: 1px solid rgb(187 187 187);
+    padding: 1rem 0;
+}
+.cart-container .titles .product-title{
+    padding-left: 0.5rem;
+}
+.cart-container .titles .total{
+    padding-right: 0.5rem;
+    justify-self: right;
+}
+.cart-item .cart-product{
+    display: flex;
+}
+.cart-item .cart-product h3{
+    font-weight: 400;
+}
+.cart-item .cart-product button{
+    border: none;
+    outline: none;
+    margin: 0.7rem;
+    cursor: pointer;
+    background: none;
+    color: gray;
+}
+.cart-item .cart-product button:hover{
+    color: black;
+    transition: .4s;
+}
+.cart-product-quantity{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 130px;
+    max-width: 100%;
+    border: 0.5px solid rgb(177 177 177);
+    border-radius: 10px;
+}
+.cart-product-quantity button{
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+}
+.cart-product-quantity .counter{
+    padding: 0.7rem 0;
+}
+.cart-product-total-price{
+    justify-self: right;
+    padding-right: 0.5rem;
+    font-weight: 700;
+}
+.shopping-basket-title{
+    background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(106, 106, 107, 0.5) 0px 3px 3px;
+}
+
+/*=============== BASKET SUMMARY ===============*/
+
+.cart-summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid rgb(187 187 187);
+    padding-top: 2rem;
+}
+.cart-summary .clear-cart{
+    width: 110px;
+    max-width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    border: 1px solid rgb(177 177 177);
+    color: gray;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+.cart-check{
+    width: 270px;
+    max-width: 100%;
+}
+.cart-check .subtotal{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.cart-check .subtotal .amount{
+    font-weight: 700;
+}
+.cart-check p{
+    font-size: 14px;
+    font-weight: 200;
+    margin: 0.5rem 0;
+}
+.cart-check button{
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #4b70e2;
+    color: white;
+    letter-spacing: 0.3px;
+}
+.cart-check button:hover{
+    background-color: #bebebe;
+    color: black;
+    transition: .4s;
+}
+.continue-shopping,
+.start-shopping{
+    margin-top: 1rem;
+}
+.continue-shopping a,
+.start-shopping a{
+    color: gray;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.continue-shopping a span,
+.start-shopping a span{
+    margin-left: 0.5rem;
+}
+.continue-shopping a:hover,
+.start-shopping a:hover{
+    color: black;
+    transition: .4s;
+}
+.cart-empty{
+    font-size: 20px;
+    margin-top: 2rem;
+    color: rgb(84 84 84);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
